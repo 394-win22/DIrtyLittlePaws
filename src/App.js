@@ -315,7 +315,7 @@ export default function App() {
               </center>
               <div id="bottomScan">
                 <button
-                  id="savebtn"
+                  id= {!click ? "savebtn" : "notavailable"}
                   className="btn"
                   onClick={() => { 
                     if (!click){
@@ -329,7 +329,7 @@ export default function App() {
                   }}
                 >
                   {" "}
-                  {!click ? "Start Session" : "Station not available"}
+                  {!click ? "Start Session" : "Not available"}
                 </button>
               </div>
             </div>
