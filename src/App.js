@@ -653,7 +653,8 @@ export default function App() {
                         break;
 
                       case "address":
-                        if (document.getElementById("homeinput").value && document.getElementById("homeinput2").value) {
+                        if (document.getElementById("homeinput").value && document.getElementById("homeinput2").value
+                         && document.getElementById("homeinput3").value && document.getElementById("homeinput4").value) {
                           console.log(
                             "Home Is: " +
                               document.getElementById("homeinput").value
