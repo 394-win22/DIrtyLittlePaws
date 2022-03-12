@@ -155,6 +155,7 @@ export default function App() {
     var duration;
 
     console.log(totaltime);
+    console.log(user);
 
     const success = async (position) => {
       const currentPosition = {
