@@ -13,6 +13,7 @@
     "google-maps-react": "^2.0.6",
     "handlebars": "^4.7.7",
     "handlebars-react": "^0.0.16",
+    "install": "^0.13.0",
     "postcss": "^8.4.8",
     "postcss-cli": "^9.1.0",
     "react": "^16.14.0",

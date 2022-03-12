@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "dirtylittlepawsdevelop",
     "public": "build",
     "ignore": [
       "firebase.json",
