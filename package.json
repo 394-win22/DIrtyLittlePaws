@@ -32,8 +32,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "em:start": "firebase emulators:start --import=./saved-data --export-on-exit",
-    "em:run": "firebase emulators:exec --import=./saved-data 'npm start'"
+    "em:start": "firebase emulators:start --project dirtylittlepaws-487d9 --import=./saved-data --export-on-exit",
+    "em:run": "firebase emulators:exec --project dirtylittlepaws-487d9 --import=./saved-data 'npm start'"
   },
   "eslintConfig": {
     "extends": [
