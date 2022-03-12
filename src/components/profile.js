@@ -67,16 +67,16 @@ function customInput(box){
         case 4:
             return (`
             
-            <input type="text" value="${curUser.userinfo.address}" placeholder="Home Address" id="homeinput" 
+            <input data-cy="Street" type="text" value="${curUser.userinfo.address}" placeholder="Home Address" id="homeinput" 
             onChange="{(e) => document.getElementById("homeinput").value = e.target.value}"/>
             <p id = "detailName"> City </p>
-            <input type="text" value="`+curUser.userinfo.city+`" placeholder="City" id="homeinput3" 
+            <input data-cy="City" type="text" value="`+curUser.userinfo.city+`" placeholder="City" id="homeinput3" 
             onChange="{(e) => document.getElementById("homeinput3").value = e.target.value}"/>
             <p id = "detailName"> State </p>          
-            <input type="text" value="`+curUser.userinfo.state+`" placeholder="State" id="homeinput2" 
+            <input data-cy="State" type="text" value="`+curUser.userinfo.state+`" placeholder="State" id="homeinput2" 
             onChange="{(e) => document.getElementById("homeinput2").value = e.target.value}"/>
             <p id = "detailName"> Zip Code </p>
-            <input type="text" value="`+curUser.userinfo.zipcode+`" placeholder="Zip code" id="homeinput4" 
+            <input data-cy="Zip" type="text" value="`+curUser.userinfo.zipcode+`" placeholder="Zip code" id="homeinput4" 
             onChange="{(e) => document.getElementById("homeinput4").value = e.target.value}"/>
             
             `);
@@ -138,10 +138,10 @@ const ProfilePage = (user) => {
                     <img alt={""} src={rightArrow} className="carats"/>
 
                 </div>
-                <div className="accinfo" onClick={ () => handleClick(4)}>
+                <div data-cy="HomeAddressClick" className="accinfo" onClick={ () => handleClick(4)}>
                     <div className="eachDetail"> 
-                        <p>Home Address</p>
-                        {!user.userinfo.address? <p id="acHome"></p> : <p id="acHome">{user.userinfo.address}. {user.userinfo.city} {user.userinfo.state}, {user.userinfo.zipcode}</p>}
+                        <p data-cy="HomeAddress">Home Address</p>
+                        {!user.userinfo.address? <p id="acHome"></p> : <p data-cy="savedHomeAddress" id="acHome">{user.userinfo.address}. {user.userinfo.city} {user.userinfo.state}, {user.userinfo.zipcode}</p>}
                     </div>
 
                     <img alt={""} src={rightArrow} className="carats"/>
