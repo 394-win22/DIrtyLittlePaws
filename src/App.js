@@ -64,7 +64,7 @@ withGoogleMap requires -
 const SignInButton = () => (
   <div id="signinpage">
     <img src={topLogo} id="logot" alt="logo" />
-    <button id="signin" className="btn" onClick={() => signInWithG()}>
+    <button data-cy="signin" id="signin" className="btn" onClick={() => signInWithG()}>
       <b>Sign In</b>
     </button>
     <button id="signup" className="btn" onClick={() => signInWithG()}>
@@ -239,6 +239,7 @@ export default function App() {
               {selectedStation.avaliable ? (
                 <div id="bottomScan">
                   <button
+                  data-cy="UnlockStation"
                     id="scanTo"
                     className="btn"
                     onClick={() => {
@@ -308,6 +309,7 @@ export default function App() {
 
               <center>
                 <input
+                data-cy="InsertPin"
                   id="inputdigit"
                   type="number"
                   placeholder="5 letter PIN"
@@ -315,6 +317,7 @@ export default function App() {
               </center>
               <div id="bottomScan">
                 <button
+                data-cy="StartSession"
                   id= {!click ? "savebtn" : "notavailable"}
                   className="btn"
                   onClick={() => { 
@@ -349,6 +352,7 @@ export default function App() {
               <div id="finishcost"> Total Cost: ${allminute * 0.5} </div>
               <center id="bottomScan">
                 <button
+                data-cy="FinishSession"
                   id="timerclick"
                   className="btn"
                   onClick={() => {
@@ -410,9 +414,10 @@ export default function App() {
     const displayLocation = (timerstate, complete) => {
       if (!timerstate && !complete && !scanclick) {
         return (
-          <div>
+          <div data-cy="LocationMarkers">
             {mdata.Locations.map((station) => (
               <Marker
+                
                 key={station.id}
                 position={{
                   lat: station.latitude,
@@ -538,6 +543,7 @@ export default function App() {
           <TopBannerDiv>
             <AccountDiv>
               <img
+              data-cy="profile"
                 alt={""}
                 height="35%"
                 src={hamburger}
@@ -618,6 +624,7 @@ export default function App() {
               <div id="customInput" />
               <center>
                 <button
+                data-cy="saveButton"
                   id="cancelbtn"
                   className="btn"
                   onClick={() => {
@@ -767,6 +774,7 @@ export default function App() {
 
           <div id="bottomnav">
             <button
+            data-cy="unlock"
               id="savebtn"
               className="btnLogin"
               onClick={() => 

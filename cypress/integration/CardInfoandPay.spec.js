@@ -1,18 +1,6 @@
 /* globals cy */
 
-
-  describe ('Test App', () => {
-
-    it ('launches', () => {
-      cy.visit ('/');
-    });
-  
-    it ('sign ins and finds scan button', () => {
-      cy.visit ('/');
-
-
-      cy.get('[data-cy=unlock]').should('contain', 'Unlock');
-    });
+describe ('Test App', () => {
 
     it('show email address in profile page after clicking', () => {
         cy.visit ('/');

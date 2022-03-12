@@ -83,13 +83,13 @@ function customInput(box){
         
         case 5:
             return (`                
-            <input type="number" value="${curUser.userinfo.payment}" placeholder="Credit Card Number" id="cardinput" 
+            <input data-cy="PaymentInfoNumber" type="number" value="${curUser.userinfo.payment}" placeholder="Credit Card Number" id="cardinput" 
             onChange="{(e) => document.getElementById("cardinput").value = e.target.value}"/>
             <p id = "detailName"> CVV </p>
-            <input type="number" value="${curUser.userinfo.cvv}" placeholder="CVV" id="cvvid" 
+            <input data-cy="PaymentInfoCVV" type="number" value="${curUser.userinfo.cvv}" placeholder="CVV" id="cvvid" 
             onChange="{(e) => document.getElementById("cvvid").value = e.target.value}"/>
             <p id = "detailName"> Date </p>
-            <input type="month" value="${curUser.userinfo.expDate}" placeholder="date" id="dateid" 
+            <input data-cy="PaymentInfoCCDate" type="month" value="${curUser.userinfo.expDate}" placeholder="date" id="dateid" 
             onChange="{(e) => document.getElementById("dateid").value = e.target.value}"/>
             `);
         default:
@@ -107,7 +107,7 @@ const ProfilePage = (user) => {
     return (
         <div>
             <div id="accheader">
-                <img alt={""} src={leftArrow} className="back" 
+                <img data-cy="BackButton" alt={""} src={leftArrow} className="back" 
                     onClick={()=> document.getElementById("ppage").style.display = "none"}/>
                 <p>Account details</p>
             </div>
@@ -125,7 +125,7 @@ const ProfilePage = (user) => {
                 </div>
                 <div className="accinfo" >
                     <div className="eachDetail">
-                        <p>Email</p>
+                        <p data-cy="Email" >Email</p>
                         <p id="acEmail">{user.useremail}</p>
                     </div>
                 </div>
@@ -147,9 +147,9 @@ const ProfilePage = (user) => {
                     <img alt={""} src={rightArrow} className="carats"/>
 
                 </div>
-                <div className="accinfo" onClick={ () => handleClick(5)}>
+                <div data-cy="PaymentClick" className="accinfo" onClick={ () => handleClick(5)}>
                     <div className="eachDetail"> 
-                        <p>Payment</p>
+                        <p data-cy="Payment">Payment</p>
                         <p id="acPay"> {user.userinfo.payment}</p>
                     </div>
 
