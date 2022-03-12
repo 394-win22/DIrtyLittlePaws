@@ -108,6 +108,9 @@ function checkUser(mdata, user) {
   }
   var info = {
     address: "",
+    city: "",
+    state: "",
+    zipcode: "",
     email: user.email,
     img: user.photoURL,
     name: user.displayName,
@@ -650,7 +653,7 @@ export default function App() {
                         break;
 
                       case "address":
-                        if (document.getElementById("homeinput").value) {
+                        if (document.getElementById("homeinput").value && document.getElementById("homeinput2").value) {
                           console.log(
                             "Home Is: " +
                               document.getElementById("homeinput").value
@@ -760,6 +763,8 @@ export default function App() {
               </center>
               <center>
                 <button
+                  data-cy="cancelButton"
+                  
                   className="btn"
                   id="cancelbtn"
                   onClick={() =>

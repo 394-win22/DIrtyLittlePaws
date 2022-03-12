@@ -27,12 +27,6 @@ describe ('Test App', () => {
         //SAVE THE PAYMENT
         cy.get('[data-cy=saveButton]').click();
         
-
-        //Back Home
-        cy.get('[data-cy=BackButton]').click({ multiple: true, force: true});
-
-        cy.get('[data-cy=LocationMarkers]').click({ multiple: true, force: true});
-
       });
 
       //PLEASE NOTE THIS COMMAN IS VERY SPECIFIC AND WILL ONLY WORK IF VIEWPORT STAYS AT 1000x600
