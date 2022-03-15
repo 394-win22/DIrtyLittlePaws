@@ -439,6 +439,7 @@ export default function App() {
 
             {
               <Marker
+                title="hel"
                 position={{
                   lat: Number(currentPosition.lat),
                   lng: Number(currentPosition.lng),
@@ -591,6 +592,7 @@ export default function App() {
               />
               <img
                 alt="currLoc"
+                data-cy="GoToCurrLoc"
                 src={GoToLocation}
                 onClick={() => {
                   setCurr({
