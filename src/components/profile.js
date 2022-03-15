@@ -58,11 +58,11 @@ function customInput(box){
 
     switch(box){
         case 3:
-            return (`<input type="text" 
-            placeholder="Pet Name"
-            value="${curUser.userinfo.petname}" 
-             id="petinput" 
-            onChange="{(e) => document.getElementById("petinput").value = "e.target.value}""/>`);
+            return (`
+            <input data-cy="PetName" type="text" value="${curUser.userinfo.petname}" placeholder="Pet Name" id="petinput" 
+            onChange="{(e) => document.getElementById("petinput").value = "e.target.value}""/>
+            <p id = "detailName"> Pet </p>
+            `);
          
         case 4:
             return (`
@@ -129,10 +129,10 @@ const ProfilePage = (user) => {
                         <p id="acEmail">{user.useremail}</p>
                     </div>
                 </div>
-                <div className="accinfo" onClick={ () => handleClick(3)}>
+                <div data-cy="PetNameClick" className="accinfo" onClick={ () => handleClick(3)}>
                     <div className="eachDetail">
-                        <p>Pet's Name</p>
-                        <p id="acPet">{user.userinfo.petname}</p>
+                        <p data-cy="PetName">Pet Name</p>
+                        {!user.userinfo.petname? <p id="acPet"></p> : <p data-cy="savedPetName" id="acpet">{user.userinfo.petname}</p>}
                     </div>
 
                     <img alt={""} src={rightArrow} className="carats"/>
