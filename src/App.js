@@ -582,6 +582,7 @@ export default function App() {
             <MapButtons>
               <img
                 alt="currHome"
+                data-cy= "GoToHome"
                 src={GoToHome}
                 onClick={() => {
                   x = mdata["users"][user.uid]["info"]["Homelatlng"]
