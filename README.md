@@ -1,6 +1,67 @@
-# Getting Started with Create React App
+Spot
+===============
+Spot is an app meant to be a self serve pet grooming service. 
+The user would reserve a location near them and then be charge for being there for a set amount of time.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Installation of code
+-------------------------------------
+
+Install Node
+We recommend using [Node16].
+
+[Node16]: https://nodejs.org/en/download/current/
+
+
+Clone the code
+
+go to file directory
+
+install all necessary Node modules
+
+```
+npm i
+```
+
+run the app in a local host
+```
+npm start
+```
+go to Localhost:3000
+
+For a more indepth explanation of Getting started with React see **Available Scripts**
+
+
+Configure your own firebase
+-----------------------
+This app relies on firebase to get location and user data. Authentication is done with firebase's sign in with google authentication.
+
+If you want to use your own firebase database you can use the file provided in the git hub repo titles **Database.json**.
+To edit Spot to contain your firebaseConfig edit **firebase.js**
+You will also need to edit **firebase.json**.
+initialize firebase in your machine. You can use this [guide]
+
+[guide]: https://medium.com/swlh/how-to-deploy-a-react-app-with-firebase-hosting-98063c5bf425
+
+
+CI
+--
+To edit your CI files please go to .github/workflows/main.yml
+
+
+License
+-------
+
+It is free software, and may be redistributed under the terms specified in the [LICENSE] file.
+
+[LICENSE]: /LICENSE
+
+About
+-----
+
+Created in CS394 @ Northwestern.
+
+Thank you Chris Reisbek!
 
 ## Available Scripts
 
@@ -38,33 +99,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
