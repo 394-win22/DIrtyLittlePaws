@@ -11,7 +11,7 @@ The user would reserve a location near them and then be charge for being there f
 - [CI](#CI)
 - [License](#license)
 - [About](#about)
-- [Available Scripts](#availiable scripts)
+- [Available Scripts](#Available)
 
 Installation of code
 -------------------------------------
@@ -83,7 +83,8 @@ Created in CS394 @ Northwestern.
 
 Thank you Chris Reisbek!
 
-## Available Scripts
+Available Scripts
+-------------------------------------
 
 In the project directory, you can run:
 
