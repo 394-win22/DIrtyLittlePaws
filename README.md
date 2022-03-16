@@ -35,7 +35,7 @@ npm start
 ```
 go to Localhost:3000
 
-For a more indepth explanation of Getting started with React see **Available Scripts**
+For a more indepth explanation of Getting started with React see **Available Scripts** section in ReadMe
 
 
 Configure your own firebase
