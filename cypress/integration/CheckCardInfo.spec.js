@@ -8,7 +8,7 @@ describe ('Test App', () => {
       cy.get('[data-cy=Email]').should('contain' ,'Email');
     });
   
-    it('Goes to profile, Enters card info, saves, returns home, clicks on station, uses station, finishes', () => {
+    it('Goes to profile, Enters card info, saves, checks', () => {
       cy.visit ('/');
       cy.get('[data-cy=profile]').click({ multiple: true, force: true}); //clicks and displays profile
       cy.get('[data-cy=Payment]').should('contain' ,'Payment');
@@ -27,6 +27,8 @@ describe ('Test App', () => {
       //SAVE THE PAYMENT
       cy.get('[data-cy=saveButton]').click();
       
+      //CHECK THE PAYMENT
+      cy.get('[data-cy=PaymentInfoNumber').should('contain' ,'1234123412341234');
     });
   
 });
