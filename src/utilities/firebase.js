@@ -4,13 +4,13 @@ import { useState, useEffect } from 'react';
 import { connectAuthEmulator, getAuth, GoogleAuthProvider, onIdTokenChanged, signInWithPopup, signOut, signInWithCredential } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBAAAaqRWLP7A4BwEmCVC2OWoKXw8j79W4",
-  authDomain: "dirtylittlepaws-487d9.firebaseapp.com",
-  databaseURL: "https://dirtylittlepaws-487d9-default-rtdb.firebaseio.com",
-  projectId: "dirtylittlepaws-487d9",
-  storageBucket: "dirtylittlepaws-487d9.appspot.com",
-  messagingSenderId: "781498327165",
-  appId: "1:781498327165:web:9da20c4afa727b8e5e5114"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 };
 
 const firebase = initializeApp(firebaseConfig);
@@ -33,11 +33,11 @@ export const useData = (path, transform) => {
   
     useEffect(() => {
       const dbRef = ref(database, path);
-      const devMode = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
-      // if (devMode) { console.log(`loading ${path}`); }
+     // const devMode = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
+  
       return onValue(dbRef, (snapshot) => {
         const val = snapshot.val();
-        if (devMode) { console.log(val); }
+       
         setData(transform ? transform(val) : val);
         setLoading(false);
         setError(null);
@@ -63,7 +63,7 @@ export const useData = (path, transform) => {
     if (data) {
       try {
         await setData(`users/${userid}/info/${route}`, data);
-        console.log("pushed to firebase")
+    
       } catch (error) {
         alert(error);
       }
@@ -86,9 +86,7 @@ export const useData = (path, transform) => {
       onIdTokenChanged(getAuth(firebase), setUser);
     }, []); 
 
-    // if(user){
-    //   console.log(user.displayName)
-    // }
+
       
     return user;
   };

@@ -12,6 +12,12 @@ We recommend using [Node16].
 
 [Node16]: https://nodejs.org/en/download/current/
 
+Get Google Maps API Key from Google Cloud Platform and insert key into line 48 of App.js
+
+Resource to get a [google] api key
+
+[google]: https://developers.google.com/maps/documentation/javascript/get-api-key
+
 
 Clone the code
 
@@ -36,12 +42,17 @@ Configure your own firebase
 -----------------------
 This app relies on firebase to get location and user data. Authentication is done with firebase's sign in with google authentication.
 
-If you want to use your own firebase database you can use the file provided in the git hub repo titles **Database.json**.
-To edit Spot to contain your firebaseConfig edit **firebase.js**
-You will also need to edit **firebase.json**.
-initialize firebase in your machine. You can use this [guide]
+If you want to use your own firebase database you can use the file provided in the git hub repo titled **Database.json**.
+To edit Spot to contain your firebaseConfig, edit **firebase.js**
+You might need to edit **firebase.json**. to have it contain your project site.
+initialize firebase in your machine. You can use this [guide] and [notes].
+The [firebase] site
 
 [guide]: https://medium.com/swlh/how-to-deploy-a-react-app-with-firebase-hosting-98063c5bf425
+
+[notes]: https://courses.cs.northwestern.edu/394/guides/firebase-notes.php
+
+[firebase]: https://courses.cs.northwestern.edu/394/guides/firebase-notes.php
 
 
 CI

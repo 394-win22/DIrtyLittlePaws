@@ -1,0 +1,72 @@
+[debug] [2022-03-16T00:34:50.705Z] ----------------------------------------------------------------------
+[debug] [2022-03-16T00:34:50.706Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Sebastian\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --project dirtylittlepaws-487d9 --import=./saved-data --export-on-exit
+[debug] [2022-03-16T00:34:50.706Z] CLI Version:   10.1.0
+[debug] [2022-03-16T00:34:50.707Z] Platform:      win32
+[debug] [2022-03-16T00:34:50.707Z] Node Version:  v16.14.0
+[debug] [2022-03-16T00:34:50.707Z] Time:          Tue Mar 15 2022 19:34:50 GMT-0500 (Central Daylight Time)
+[debug] [2022-03-16T00:34:50.708Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-16T00:34:50.710Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-03-16T00:34:50.778Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-16T00:34:50.778Z] > authorizing via signed-in user (sebastian.perezdelgado@gmail.com)
+[info] i  emulators: Starting emulators: auth, database, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, database, hosting"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project dirtylittlepaws-487d9. This may result in unexpected behavior. 
+[debug] [2022-03-16T00:34:50.788Z] [hub] writing locator at C:\Users\SEBAST~1\AppData\Local\Temp\hub-dirtylittlepaws-487d9.json
+[debug] [2022-03-16T00:34:50.796Z] > refreshing access token with scopes: []
+[debug] [2022-03-16T00:34:50.796Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-16T00:34:50.882Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-03-16T00:34:50.882Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-03-16T00:34:50.897Z] <<< HTTP RESPONSE 200 {"date":"Wed, 16 Mar 2022 00:34:51 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-16T00:34:50.904Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dirtylittlepaws-487d9 [none]
+[debug] [2022-03-16T00:34:51.064Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dirtylittlepaws-487d9 200
+[debug] [2022-03-16T00:34:51.064Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dirtylittlepaws-487d9 {"projectId":"dirtylittlepaws-487d9","projectNumber":"781498327165","displayName":"DirtyLittlePaws","name":"projects/dirtylittlepaws-487d9","resources":{"hostingSite":"dirtylittlepaws-487d9","realtimeDatabaseInstance":"dirtylittlepaws-487d9-default-rtdb","storageBucket":"dirtylittlepaws-487d9.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[debug] [2022-03-16T00:34:51.065Z] database rules config:  []
+[warn] !  database: Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"database"},"message":"Did not find a Realtime Database rules file specified in a firebase.json config file. The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2022-03-16T00:34:51.066Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2022-03-16T00:34:51.066Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-03-16T00:34:51.066Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2022-03-16T00:34:51.066Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\Sebastian\\.cache\\firebase\\emulators\\firebase-database-emulator-v4.7.3.jar","--host","localhost","--port",9000],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\Sebastian\\\\.cache\\\\firebase\\\\emulators\\\\firebase-database-emulator-v4.7.3.jar\",\"--host\",\"localhost\",\"--port\",9000],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2022-03-16T00:34:52.550Z] 19:34:52.548 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"19:34:52.548 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\r\n"}}
+[debug] [2022-03-16T00:34:52.671Z] 19:34:52.670 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"19:34:52.670 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000\r\n"}}
+[info] i  database: Importing data from C:\Users\Sebastian\Documents\code projects\DIrtyLittlePaws\saved-data\database_export\dirtylittlepaws-487d9-default-rtdb.json {"metadata":{"emulator":{"name":"database"},"message":"Importing data from C:\\Users\\Sebastian\\Documents\\code projects\\DIrtyLittlePaws\\saved-data\\database_export\\dirtylittlepaws-487d9-default-rtdb.json"}}
+[info] i  database: Importing data from C:\Users\Sebastian\Documents\code projects\DIrtyLittlePaws\saved-data\database_export\dirtylittlepaws-487d9.json {"metadata":{"emulator":{"name":"database"},"message":"Importing data from C:\\Users\\Sebastian\\Documents\\code projects\\DIrtyLittlePaws\\saved-data\\database_export\\dirtylittlepaws-487d9.json"}}
+[info] i  auth: Importing config from C:\Users\Sebastian\Documents\code projects\DIrtyLittlePaws\saved-data\auth_export\config.json {"metadata":{"emulator":{"name":"database"},"message":"Importing config from C:\\Users\\Sebastian\\Documents\\code projects\\DIrtyLittlePaws\\saved-data\\auth_export\\config.json"}}
+[info] i  auth: Importing accounts from C:\Users\Sebastian\Documents\code projects\DIrtyLittlePaws\saved-data\auth_export\accounts.json {"metadata":{"emulator":{"name":"database"},"message":"Importing accounts from C:\\Users\\Sebastian\\Documents\\code projects\\DIrtyLittlePaws\\saved-data\\auth_export\\accounts.json"}}
+[debug] [2022-03-16T00:34:58.424Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/dirtylittlepaws-487d9/sites 
+[debug] [2022-03-16T00:34:58.668Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/dirtylittlepaws-487d9/sites 200
+[debug] [2022-03-16T00:34:58.668Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/dirtylittlepaws-487d9/sites {"sites":[{"name":"projects/781498327165/sites/dirtylittlepaws-487d9","defaultUrl":"https://dirtylittlepaws-487d9.web.app","type":"DEFAULT_SITE"},{"name":"projects/781498327165/sites/dirtylittlepawsdevelop","defaultUrl":"https://dirtylittlepawsdevelop.web.app","type":"USER_SITE"}]}
+[debug] [2022-03-16T00:34:58.669Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dirtylittlepaws-487d9/webApps/-/config [none]
+[debug] [2022-03-16T00:34:58.892Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dirtylittlepaws-487d9/webApps/-/config 200
+[debug] [2022-03-16T00:34:58.893Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dirtylittlepaws-487d9/webApps/-/config {"projectId":"dirtylittlepaws-487d9","appId":"1:781498327165:web:9da20c4afa727b8e5e5114","databaseURL":"https://dirtylittlepaws-487d9-default-rtdb.firebaseio.com","storageBucket":"dirtylittlepaws-487d9.appspot.com","locationId":"us-central","apiKey":"AIzaSyBAAAaqRWLP7A4BwEmCVC2OWoKXw8j79W4","authDomain":"dirtylittlepaws-487d9.firebaseapp.com","messagingSenderId":"781498327165"}
+[info] i  hosting[dirtylittlepawsdevelop]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting[dirtylittlepawsdevelop]: Local server: http://localhost:5001 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5001\u001b[22m\u001b[24m"}}
+[debug] [2022-03-16T00:34:58.910Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-03-16T00:34:58.911Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-03-16T00:34:58.911Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Sebastian\\.cache\\firebase\\emulators\\ui-v1.6.4\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Sebastian\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.6.4\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-03-16T00:34:58.995Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI            │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Authentication │ localhost:9099 │ http://localhost:4000/auth     │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Database       │ localhost:9000 │ http://localhost:4000/database │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Hosting        │ localhost:5001 │ n/a                            │
+└────────────────┴────────────────┴────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 

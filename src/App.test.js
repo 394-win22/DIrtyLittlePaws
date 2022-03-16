@@ -14,16 +14,16 @@ const muser = {
   "Locations" : [null],
   "title" : "All Locations",
   "users" :  { 
-  "0bMtDcAIKyUkTFK0jWDgW6Vmlnt1" : {
+  "urdPpjEZjQDKdHFYvtoauwKHyQbc" : {
   "info" : {
     "Homelatlng" : {
       "lat" : 41.921634,
       "lng" : -87.659558
     },
     "address" : "",
-    "email" : "c-riesbeck@u.northwestern.edu",
-    "img" : "https://lh3.googleusercontent.com/a-/AOh14Gid_efaV6PYa1_fc8Fkeg9jO7bz0U5j9Bij3LCs=s96-c",
-    "name" : "Christopher Riesbeck",
+    "email" : "spot2937@gmail.com",
+    "img" : "",
+    "name" : "Stephen Spot",
     "payment" : "",
     "petname" : ""
   }
@@ -32,8 +32,8 @@ const muser = {
 const muser2 = {
   "accessToken" : "",
   "auth" : [null],
-  "displayName" : "Christopher Riesbeck",
-  "email" : "c-riesbeck@u.northwestern.edu",
+  "displayName" : "Stephen Spot",
+  "email" : "spot2937@gmail.com",
   "emailVerified" : "true",
   "isAnonymous" : "false",
  };

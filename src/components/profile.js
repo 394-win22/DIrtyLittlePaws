@@ -2,12 +2,10 @@
 import leftArrow from "../styles/svgs/back.svg";
 import rightArrow from "../styles/svgs/close.svg";
 import { SignOutButton } from "../App";
-// import {useUserState} from "../utilities/firebase.js";
 
 
 function handleClick(box){
     document.getElementById("accinfo").style.display = "block";
-    // document.getElementById("inputid").value = "";
 
     var label;
     var shortened;
@@ -59,7 +57,7 @@ function customInput(box){
     switch(box){
         case 3:
             return (`
-            <input data-cy="PetName" type="text" value="${curUser.userinfo.petname}" placeholder="Pet Name" id="petinput" 
+            <input data-cy="petname" type="text" value="${curUser.userinfo.petname}" placeholder="Pet Name" id="petinput" 
             onChange="{(e) => document.getElementById("petinput").value = "e.target.value}""/>
             <p id = "detailName"> Pet </p>
             `);
@@ -98,10 +96,6 @@ function customInput(box){
 }
 
 const ProfilePage = (user) => {
-
-    // console.log("Profile page clicked");
-    // console.log("user is " + user.username);
-    // console.log("user info from profile " + user.userinfo.name);
     curUser = user
    
     return (

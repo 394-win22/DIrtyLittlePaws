@@ -10,11 +10,11 @@ describe ('Test App', () => {
       it('Goes to profile, enters pet name, save pet name. Check if profile contains pet name. This should pass', () => {
         cy.visit ('/');
         cy.get('[data-cy=profile]').click({ multiple: true, force: true}); //clicks and displays profile
-        cy.get('[data-cy=petname]').should('contain' ,'Pet Name');
+        cy.get('[data-cy=PetName]').should('contain' ,'Pet Name');
         cy.get('[data-cy=PetNameClick]').click({ multiple: true, force: true}); //clicks and displays pet name
         
         // edit pet name
-        cy.get('[ data-cy="PetName"]').type('Spot');
+        cy.get('[ data-cy="petname"]').type('Spot');
 
         //SAVE THE pet name
         cy.get('[data-cy=saveButton]').click();

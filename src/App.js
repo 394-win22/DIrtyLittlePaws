@@ -16,7 +16,7 @@ import {
   signOutOfG,
   pushToFirebase,
 } from "./utilities/firebase.js";
-// import help from "../src/styles/svgs/help.svg";
+
 import hamburger from "../src/styles/svgs/hamburger.svg";
 import close from "../src/styles/svgs/close.svg";
 import CurrentLocationIcon from "../src/styles/svgs/Location.svg";
@@ -45,7 +45,7 @@ import {
 } from "./styles/styles.js";
 
 import ProfilePage from "./components/profile.js";
-
+const APIKEY = ""
 /* HELP COMMENT
 withGoogleMap initializes the map component while withScriptjs loads the Google Map JavaScript API v3.
 
@@ -158,7 +158,6 @@ export default function App() {
     var duration;
 
     console.log(totaltime);
-    console.log(user);
 
     const success = async (position) => {
       const currentPosition = {
@@ -270,10 +269,6 @@ export default function App() {
                           onChange="{(e) => document.getElementById("dateid").value = e.target.value}"/>`;
                       } else {
                         setScanclick(true);
-
-                        //   timerstart = new Date().getTime();
-                        //   setTimerstate(true);
-                        //   changeTimer();
                       }
                     }}
                   >
@@ -295,7 +290,6 @@ export default function App() {
           </div>
         );
       } else if ((scanclick && selectedStation && !timerstate && !complete) || click) {
-        console.log("input code page");
         return (
           <div className="modal">
             <div className="modal-content">
@@ -371,8 +365,6 @@ export default function App() {
                     duration = hour
                       .toString()
                       .concat(":", minute.toString(), ":", sec.toString());
-                    console.log("hour", hour);
-                    console.log("duration", duration);
                     setTimerstate(false);
                     stopTimer();
                     setComplete(true);
@@ -571,7 +563,7 @@ export default function App() {
 
           <MapDiv>
             <MapWrapped
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcQK-u06gf7heyS6eo0xE-hK__S5XriZs"
+              googleMapURL={"https://maps.googleapis.com/maps/api/js?key="+APIKEY}
               loadingElement={<div style={{ height: `100%`, width: "100%" }} />}
               containerElement={
                 <div style={{ height: `100%`, width: "100%" }} />
@@ -659,10 +651,7 @@ export default function App() {
                       case "address":
                         if (document.getElementById("homeinput").value && document.getElementById("homeinput2").value
                          && document.getElementById("homeinput3").value && document.getElementById("homeinput4").value) {
-                          console.log(
-                            "Home Is: " +
-                              document.getElementById("homeinput").value
-                          );
+                          
 
                           pushToFirebase(
                             document
@@ -695,7 +684,7 @@ export default function App() {
                             "none";
 
                         
-                            const url = "https://maps.googleapis.com/maps/api/geocode/json?address="+document.getElementById("homeinput").value+"%20%20"+document.getElementById("homeinput3").value+"%20"+document.getElementById("homeinput2").value+"%20&key=AIzaSyC0DQ7ymkbd9IozyJFce1qp6x4ljaYj8ns";
+                            const url = "https://maps.googleapis.com/maps/api/geocode/json?address="+document.getElementById("homeinput").value+"%20%20"+document.getElementById("homeinput3").value+"%20"+document.getElementById("homeinput2").value+"%20&key="+APIKEY;
                             fetch(url)
                               .then((response) => response.json())
                               .then((json) => {x = json.results[0].geometry.location;
@@ -705,7 +694,7 @@ export default function App() {
                                                   x
                                                 );})
                               .catch((error) => console.log(error));
-                            console.log(x);
+                            
                         } else {
                           alert("invalid info");
                         }
@@ -719,17 +708,7 @@ export default function App() {
                         );
 
                         if (val === 1) {
-                          console.log(
-                            "INPUT IS: " +
-                              document.getElementById("cardinput").value
-                          );
-                          console.log(
-                            "SHORTENED: " +
-                              document
-                                .getElementById("savebtn")
-                                .getAttribute("data-shortened")
-                          );
-                          console.log("USER ID: " + user.uid);
+                          
 
                           pushToFirebase(
                             document
