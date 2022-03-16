@@ -2,16 +2,11 @@
 
 describe ('Test App', () => {
 
-    it('show email address in profile page after clicking', () => {
+    it('enter card info at map station', () => {
         cy.visit ('/');
-        cy.get('[data-cy=profile]').click({ multiple: true, force: true});
-        cy.get('[data-cy=Email]').should('contain' ,'Email');
-      });
-    
-      it('Goes to profile, Enters card info, saves, returns home, clicks on station, uses station, finishes', () => {
-        cy.visit ('/');
-        cy.get('[data-cy=profile]').click({ multiple: true, force: true}); //clicks and displays profile
-        cy.get('[data-cy=Payment]').should('contain' ,'Payment');
+        cy.get('[style="width: 40px; height: 40px; overflow: hidden; position: absolute; cursor: pointer; touch-action: none; left: -101px; top: 49px; z-index: 89;"] > img').click({ multiple: true, force: true});
+        cy.get('[data-cy="UnlockStation"]').click({ multiple: true, force: true});
+
         cy.get('[data-cy=PaymentClick]').click({ multiple: true, force: true}); //clicks and displays edit payment
         
         //EDIT THE PAYMENT
@@ -26,17 +21,7 @@ describe ('Test App', () => {
 
         //SAVE THE PAYMENT
         cy.get('[data-cy=saveButton]').click();
-        
-      });
 
-      //PLEASE NOTE THIS COMMAN IS VERY SPECIFIC AND WILL ONLY WORK IF VIEWPORT STAYS AT 1000x600
-      it('clicks on station, uses station, finishes', () => {
-        cy.visit ('/');
-        cy.get('[style="width: 40px; height: 40px; overflow: hidden; position: absolute; cursor: pointer; touch-action: none; left: -101px; top: 49px; z-index: 89;"] > img').click({ multiple: true, force: true});
-        cy.get('[data-cy="UnlockStation"]').click({ multiple: true, force: true});
-        cy.get('[ data-cy="InsertPin"]').type('12345');
-        cy.get('[data-cy="StartSession"]').click({ multiple: true, force: true});
-        cy.get('[data-cy="FinishSession"]').click({ multiple: true, force: true});
       });
     
   });
