@@ -4,6 +4,15 @@ Spot is an app meant to be a self serve pet grooming service.
 The user would reserve a location near them and then be charge for being there for a set amount of time.
 
 
+## Table of Contents
+
+- [Installation of code](#install)
+- [Configure your own firebase](#firebase)
+- [CI](#CI)
+- [License](#license)
+- [About](#about)
+- [Available Scripts](#availiable scripts)
+
 Installation of code
 -------------------------------------
 
